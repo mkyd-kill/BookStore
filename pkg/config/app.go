@@ -12,7 +12,12 @@ var (
 
 // database connection
 func Connect() {
-	dbConnect, err := gorm.Open("mysql", "romeo:Coolkid@34/simplerest?charset=utf8&parseTime=True&loc=Local")
+	// mysql username, password and table to be used
+	mysqlUsername := ""
+	mysqlPassword := ""
+	mysqlTable := ""
+	
+	dbConnect, err := gorm.Open("mysql", mysqlUsername + ":" + mysqlPassword + "/" + mysqlTable + "?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
