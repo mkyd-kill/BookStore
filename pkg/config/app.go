@@ -2,7 +2,7 @@ package config
 
 import (
 	"github.com/jinzhu/gorm"
-		"github.com/jinzhu/gorm/dialets/mysql"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 // database variable
